@@ -37,7 +37,7 @@ seed_everything(9)
 # In[4]:
 
 
-predictor = TabularPredictor.load("no_scaling_junhan_model")
+predictor = TabularPredictor.load("no_scaling_junhan_model", require_py_version_match=False)
 
 
 # ### Get current tiem
