@@ -1,3 +1,7 @@
+# dont upload model
+no_scaling_junhan_model/
+secret.py
+scaler/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
