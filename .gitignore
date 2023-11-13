@@ -2,6 +2,10 @@
 no_scaling_junhan_model/
 secret.py
 scaler/
+final_model_1/
+final_model_2/
+irr_loss/
+weather_models/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

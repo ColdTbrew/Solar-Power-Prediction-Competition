@@ -72,6 +72,7 @@ weather_fcst = requests.get(f'https://research-api.solarkim.com/cmpt-2023/weathe
                         'Authorization': f'Bearer {API_KEY}'
                     }).json()
 model_pred = pd.DataFrame(gen_fcst)
+
 tmrw_weather = pd.DataFrame(weather_fcst).drop(columns = 'time')
 test = pd.concat([model_pred, tmrw_weather], axis=1)
 
@@ -158,7 +159,7 @@ test[original_feature_names] = scaler.transform(test[original_feature_names])
 
 # In[20]:
 
-
+predictor = TabularPredictor.load("no_scaling_junhan_model",require_py_version_match=False)
 pred_y = predictor.predict(test)
 pred_y = pred_y.apply(lambda x: 0 if x < 0 else x)
 
